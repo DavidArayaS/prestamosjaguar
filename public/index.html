@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prestamos Jaguar | Soluciones Hipotecarias</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Fraunces:opsz,wght@9..144,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+
+    <header class="topbar glass">
+      <div class="brand-wrap">
+        <div class="brand-badge">PJ</div>
+        <div class="brand">Prestamos Jaguar</div>
+      </div>
+      <nav>
+        <a href="#inicio" data-i18n="navHome">Inicio</a>
+        <a href="#experiencia" data-i18n="navExperience">Experiencia</a>
+        <a href="#calculadora" data-i18n="navCalc">Calculadora</a>
+        <a href="#solicitud" data-i18n="navForm">Solicitud</a>
+        <a href="#testimonios" data-i18n="navTestimonials">Testimonios</a>
+      </nav>
+      <button id="langToggle" class="lang-btn">EN</button>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero container">
+        <div class="hero-text glass card-raise">
+          <p class="kicker" data-i18n="heroKicker">Prestamos con garantia hipotecaria</p>
+          <h1 data-i18n="heroTitle">Dinero rapido, tasas competitivas y poco papeleo</h1>
+          <p data-i18n="heroText">
+            Prestamos Jaguar tiene anos en el mercado ayudando a personas y negocios a obtener liquidez con
+            evaluaciones rapidas y acompanamiento real.
+          </p>
+          <div class="hero-actions">
+            <a href="#solicitud" class="btn btn-primary" data-i18n="heroCtaApply">Solicitar ahora</a>
+            <a href="#calculadora" class="btn btn-soft" data-i18n="heroCtaCalc">Calcular cuota</a>
+          </div>
+        </div>
+
+        <div class="hero-card glass card-raise">
+          <p class="panel-title" data-i18n="heroPanelTitle">Resumen financiero</p>
+          <div class="metric-grid">
+            <article>
+              <span data-i18n="heroMetric1Label">Trayectoria</span>
+              <strong data-i18n="heroMetric1Value">+15 anos</strong>
+            </article>
+            <article>
+              <span data-i18n="heroMetric2Label">Respuesta inicial</span>
+              <strong data-i18n="heroMetric2Value">24h</strong>
+            </article>
+            <article>
+              <span data-i18n="heroMetric3Label">Atencion</span>
+              <strong data-i18n="heroMetric3Value">Personalizada</strong>
+            </article>
+            <article>
+              <span data-i18n="heroMetric4Label">Proceso</span>
+              <strong data-i18n="heroMetric4Value">Simple</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="experiencia" class="container trust-strip glass card-raise">
+        <article>
+          <h3 data-i18n="trustTitle1">Experiencia real</h3>
+          <p data-i18n="trustText1">Anos en el mercado financiando con respaldo hipotecario.</p>
+        </article>
+        <article>
+          <h3 data-i18n="trustTitle2">Poco papeleo</h3>
+          <p data-i18n="trustText2">Proceso agil para clientes que necesitan velocidad y claridad.</p>
+        </article>
+        <article>
+          <h3 data-i18n="trustTitle3">Tasas competitivas</h3>
+          <p data-i18n="trustText3">Condiciones transparentes adaptadas a cada perfil financiero.</p>
+        </article>
+      </section>
+
+      <section id="calculadora" class="container section-grid">
+        <div class="calc-panel glass card-raise">
+          <h2 data-i18n="calcTitle">Calculadora de credito</h2>
+          <p data-i18n="calcText">Estima tu cuota mensual y toma una decision informada.</p>
+          <div class="calc-fields">
+            <label>
+              <span data-i18n="calcAmount">Monto del prestamo (USD)</span>
+              <input id="calcAmount" type="number" min="1000" value="25000" />
+            </label>
+            <label>
+              <span data-i18n="calcRate">Tasa anual (%)</span>
+              <input id="calcRate" type="number" min="1" step="0.1" value="14" />
+            </label>
+            <label>
+              <span data-i18n="calcYears">Plazo (anos)</span>
+              <input id="calcYears" type="number" min="1" max="30" value="10" />
+            </label>
+          </div>
+          <div class="actions-row">
+            <button id="calcBtn" class="btn btn-primary" data-i18n="calcButton">Calcular</button>
+            <a href="#solicitud" class="btn btn-soft" data-i18n="calcApply">Aplicar con este monto</a>
+          </div>
+        </div>
+        <div class="calc-result glass card-raise">
+          <p data-i18n="resultLabel">Cuota mensual estimada</p>
+          <h3 id="monthlyResult">$0.00</h3>
+          <div class="result-grid">
+            <div>
+              <span data-i18n="resultTotal">Total a pagar</span>
+              <strong id="totalResult">$0.00</strong>
+            </div>
+            <div>
+              <span data-i18n="resultInterest">Interes total</span>
+              <strong id="interestResult">$0.00</strong>
+            </div>
+          </div>
+          <small data-i18n="resultDisclaimer"
+            >Esta calculadora es informativa y no sustituye una oferta formal.</small
+          >
+        </div>
+      </section>
+
+      <section id="solicitud" class="container form-section">
+        <div class="section-head">
+          <h2 data-i18n="formTitle">Solicitud de prestamo hipotecario</h2>
+          <p data-i18n="formText">
+            Completa este formulario y enviaremos tu caso para evaluacion. Te contactamos por telefono.
+          </p>
+        </div>
+
+        <form id="loanForm" class="loan-form glass card-raise">
+          <label>
+            <span data-i18n="fName">Nombre completo</span>
+            <input name="nombreCompleto" required />
+          </label>
+          <label>
+            <span data-i18n="fId">Numero de cedula</span>
+            <input name="cedula" required />
+          </label>
+          <label>
+            <span data-i18n="fPhoneMain">Telefono principal</span>
+            <input name="telefonoPrincipal" required />
+          </label>
+          <label>
+            <span data-i18n="fPhoneSec">Telefono secundario</span>
+            <input name="telefonoSecundario" />
+          </label>
+          <label>
+            <span data-i18n="fEmail">Correo electronico</span>
+            <input type="email" name="correo" required />
+          </label>
+          <label>
+            <span data-i18n="fAmount">Cantidad solicitada (USD)</span>
+            <input type="number" name="montoPrestamo" required />
+          </label>
+          <label>
+            <span data-i18n="fPropertyType">Tipo de propiedad a hipotecar</span>
+            <select name="tipoPropiedad" required>
+              <option value="" data-i18n="fSelect">Seleccionar</option>
+              <option value="Casa" data-i18n="fHouse">Casa</option>
+              <option value="Apartamento" data-i18n="fApartment">Apartamento</option>
+              <option value="Terreno" data-i18n="fLand">Terreno</option>
+              <option value="Comercial" data-i18n="fCommercial">Comercial</option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="fPropertySize">Tamano de la propiedad</span>
+            <input name="tamanoPropiedad" placeholder="m2 / ft2" required />
+          </label>
+          <label>
+            <span data-i18n="fFiscal">Valor fiscal de la propiedad (USD)</span>
+            <input type="number" name="valorFiscal" required />
+          </label>
+          <label>
+            <span data-i18n="fLocation">Ubicacion de la propiedad</span>
+            <input name="ubicacion" />
+          </label>
+          <label>
+            <span data-i18n="fIncome">Ingreso mensual aproximado (USD)</span>
+            <input type="number" name="ingresoMensual" />
+          </label>
+          <label>
+            <span data-i18n="fDebts">Deudas actuales</span>
+            <input name="deudasActuales" />
+          </label>
+          <label class="full">
+            <span data-i18n="fNotes">Comentarios adicionales</span>
+            <textarea name="comentarios" rows="4"></textarea>
+          </label>
+          <button class="btn btn-primary full" type="submit" data-i18n="formSubmit">
+            Enviar solicitud
+          </button>
+          <p id="formStatus" class="full form-status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="testimonios" class="container testimonials">
+        <div class="section-head">
+          <h2 data-i18n="testTitle">Testimonios</h2>
+          <p data-i18n="testText">Experiencias de clientes que valoraron la rapidez y el trato humano.</p>
+        </div>
+        <div id="testimonialTrack" class="testimonial-track"></div>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <p>© <span id="year"></span> Prestamos Jaguar</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
