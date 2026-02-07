@@ -20,7 +20,7 @@ Sitio web informativo de prestamos hipotecarios con:
    ```bash
    cp .env.example .env
    ```
-3. Configura los datos SMTP en `.env`.
+3. Configura los datos SMTP (Brevo) y Cloudflare Turnstile en `.env`.
 
 ## Ejecutar
 ```bash
@@ -37,17 +37,24 @@ Abre [http://localhost:3000](http://localhost:3000)
 - `SMTP_PASS`: password SMTP / app password
 - `NOTIFY_TO`: correo que recibira las solicitudes
 - `FROM_EMAIL`: correo remitente
+- `TURNSTILE_SITE_KEY`: site key de Cloudflare Turnstile
+- `TURNSTILE_SECRET_KEY`: secret key de Cloudflare Turnstile
 
-## Proton Mail
+## Brevo (SMTP)
 Ejemplo recomendado en `.env`:
-- `SMTP_HOST=smtp.protonmail.ch`
+- `SMTP_HOST=smtp-relay.brevo.com`
 - `SMTP_PORT=587`
 - `SMTP_SECURE=false`
-- `SMTP_USER=tu-cuenta@proton.me`
-- `SMTP_PASS=tu-clave-smtp-o-app-password`
-- `NOTIFY_TO=tu-cuenta@proton.me`
-- `FROM_EMAIL=tu-cuenta@proton.me`
+- `SMTP_USER=tu-smtp-login`
+- `SMTP_PASS=tu-smtp-key`
+- `FROM_EMAIL=tu-remitente-verificado@tudominio.com`
+- `NOTIFY_TO=tu-correo@tudominio.com`
+
+## Cloudflare Turnstile
+- `TURNSTILE_SITE_KEY=tu-turnstile-site-key`
+- `TURNSTILE_SECRET_KEY=tu-turnstile-secret-key`
 
 ## Notas
 - Si faltan variables SMTP, el formulario mostrara error del servidor.
+- Si faltan variables de Turnstile, el captcha se desactiva automaticamente.
 - Puedes personalizar textos y estilo en `public/app.js` y `public/styles.css`.
