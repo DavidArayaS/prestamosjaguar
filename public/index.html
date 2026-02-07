@@ -4,12 +4,68 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prestamos Jaguar | Soluciones Hipotecarias</title>
+    <meta
+      name="description"
+      content="Prestamos hipotecarios en Costa Rica con respuesta rapida, tasas competitivas y poco papeleo. Calcula tu cuota en colones o dolares."
+    />
+    <meta
+      name="keywords"
+      content="prestamos en costa rica, prestamos hipotecarios costa rica, credito hipotecario costa rica, prestamo rapido costa rica, prestamos jaguar"
+    />
+    <meta name="geo.region" content="CR" />
+    <meta name="geo.placename" content="Costa Rica" />
+    <meta property="og:locale" content="es_CR" />
+    <meta property="og:title" content="Prestamos Jaguar | Prestamos Hipotecarios en Costa Rica" />
+    <meta
+      property="og:description"
+      content="Financiamiento con garantia hipotecaria en Costa Rica. Evaluacion agil y atencion personalizada."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Fraunces:opsz,wght@9..144,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Sora:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Puedo solicitar si mi propiedad está fuera del GAM?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. Atendemos solicitudes dentro y fuera del Gran Área Metropolitana en todo Costa Rica."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Trabajan con independientes y empresas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. Evaluamos casos de personas físicas, trabajadores independientes y personas jurídicas."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuánto tarda la evaluación inicial?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "La evaluación inicial se entrega en un plazo máximo de 24 horas."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué propiedades aplican como garantía?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Casas, apartamentos, lotes y propiedades comerciales inscritas en Costa Rica."
+            }
+          }
+        ]
+      }
+    </script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -18,52 +74,61 @@
 
     <header class="topbar glass">
       <div class="brand-wrap">
-        <div class="brand-badge">PJ</div>
+        <img class="brand-logo" src="jaguar-symbol.svg" alt="Simbolo Jaguar" />
         <div class="brand">Prestamos Jaguar</div>
       </div>
       <nav>
         <a href="#inicio" data-i18n="navHome">Inicio</a>
         <a href="#experiencia" data-i18n="navExperience">Experiencia</a>
+        <a href="#cobertura" data-i18n="navCoverage">Cobertura</a>
         <a href="#calculadora" data-i18n="navCalc">Calculadora</a>
         <a href="#solicitud" data-i18n="navForm">Solicitud</a>
+        <a href="#faq" data-i18n="navFaq">FAQ</a>
         <a href="#testimonios" data-i18n="navTestimonials">Testimonios</a>
       </nav>
-      <button id="langToggle" class="lang-btn">EN</button>
+      <select id="langSelect" class="lang-select" aria-label="Idioma">
+        <option value="es">ES</option>
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+      </select>
     </header>
 
     <main>
       <section id="inicio" class="hero container">
+        <img class="jaguar-mark jaguar-hero" src="jaguar-symbol.svg" alt="" aria-hidden="true" />
         <div class="hero-text glass card-raise">
-          <p class="kicker" data-i18n="heroKicker">Prestamos con garantia hipotecaria</p>
-          <h1 data-i18n="heroTitle">Dinero rapido, tasas competitivas y poco papeleo</h1>
+          <p class="kicker" data-i18n="heroKicker">Préstamos hipotecarios en Costa Rica</p>
+          <h1 data-i18n="heroTitle">Préstamos sobre casas, lotes y propiedades comerciales</h1>
           <p data-i18n="heroText">
-            Prestamos Jaguar tiene anos en el mercado ayudando a personas y negocios a obtener liquidez con
-            evaluaciones rapidas y acompanamiento real.
+            Obtenga liquidez usando su casa, apartamento, lote o propiedad comercial como respaldo. Préstamos
+            hipotecarios en Costa Rica con cobertura nacional, proceso legal y transparente. Respuesta inicial
+            en un plazo máximo de 24 horas.
           </p>
           <div class="hero-actions">
-            <a href="#solicitud" class="btn btn-primary" data-i18n="heroCtaApply">Solicitar ahora</a>
+            <a href="#solicitud" class="btn btn-primary" data-i18n="heroCtaApply">Solicitar evaluación</a>
             <a href="#calculadora" class="btn btn-soft" data-i18n="heroCtaCalc">Calcular cuota</a>
           </div>
         </div>
 
         <div class="hero-card glass card-raise">
-          <p class="panel-title" data-i18n="heroPanelTitle">Resumen financiero</p>
+          <p class="panel-title" data-i18n="heroPanelTitle">Datos clave</p>
+          <img class="jaguar-mark jaguar-data" src="jaguar-symbol.svg" alt="" aria-hidden="true" />
           <div class="metric-grid">
             <article>
-              <span data-i18n="heroMetric1Label">Trayectoria</span>
-              <strong data-i18n="heroMetric1Value">+15 anos</strong>
+              <span data-i18n="heroMetric1Label">Clientes atendidos</span>
+              <strong data-i18n="heroMetric1Value">+500 operaciones en Costa Rica</strong>
             </article>
             <article>
-              <span data-i18n="heroMetric2Label">Respuesta inicial</span>
-              <strong data-i18n="heroMetric2Value">24h</strong>
+              <span data-i18n="heroMetric2Label">¿A quién financiamos?</span>
+              <strong data-i18n="heroMetric2Value">Personas y Empresas</strong>
             </article>
             <article>
-              <span data-i18n="heroMetric3Label">Atencion</span>
-              <strong data-i18n="heroMetric3Value">Personalizada</strong>
+              <span data-i18n="heroMetric3Label">Destino del financiamiento</span>
+              <strong data-i18n="heroMetric3Value">Capital de trabajo, liquidez o inversión</strong>
             </article>
             <article>
-              <span data-i18n="heroMetric4Label">Proceso</span>
-              <strong data-i18n="heroMetric4Value">Simple</strong>
+              <span data-i18n="heroMetric4Label">Ubicación de la propiedad</span>
+              <strong data-i18n="heroMetric4Value">Dentro y fuera del GAM</strong>
             </article>
           </div>
         </div>
@@ -71,55 +136,56 @@
 
       <section id="experiencia" class="container trust-strip glass card-raise">
         <article>
-          <h3 data-i18n="trustTitle1">Experiencia real</h3>
-          <p data-i18n="trustText1">Anos en el mercado financiando con respaldo hipotecario.</p>
+          <h3 data-i18n="trustTitle1">¿Qué propiedades aplican?</h3>
+          <p data-i18n="trustText1">Casas, apartamentos, lotes y propiedades comerciales inscritas, ubicadas en cualquier zona de Costa Rica.</p>
         </article>
         <article>
-          <h3 data-i18n="trustTitle2">Poco papeleo</h3>
-          <p data-i18n="trustText2">Proceso agil para clientes que necesitan velocidad y claridad.</p>
+          <h3 data-i18n="trustTitle2">¿Cómo funciona un préstamo hipotecario?</h3>
+          <p data-i18n="trustText2">Su propiedad se utiliza como garantía para acceder a financiamiento, con plazos y condiciones definidos según el valor del inmueble.</p>
         </article>
         <article>
-          <h3 data-i18n="trustTitle3">Tasas competitivas</h3>
-          <p data-i18n="trustText3">Condiciones transparentes adaptadas a cada perfil financiero.</p>
+          <h3 data-i18n="trustTitle3">Proceso claro y acompañado</h3>
+          <p data-i18n="trustText3">Le explicamos cada paso del proceso, sin letra pequeña ni sorpresas, desde la evaluación hasta la formalización.</p>
         </article>
       </section>
 
-      <section id="calculadora" class="container section-grid">
-        <div class="calc-panel glass card-raise">
-          <h2 data-i18n="calcTitle">Calculadora de credito</h2>
-          <p data-i18n="calcText">Estima tu cuota mensual y toma una decision informada.</p>
-          <div class="calc-fields">
-            <label>
-              <span data-i18n="calcAmount">Monto del prestamo (USD)</span>
-              <input id="calcAmount" type="number" min="1000" value="25000" />
-            </label>
-            <label>
-              <span data-i18n="calcRate">Tasa anual (%)</span>
-              <input id="calcRate" type="number" min="1" step="0.1" value="14" />
-            </label>
-            <label>
-              <span data-i18n="calcYears">Plazo (anos)</span>
-              <input id="calcYears" type="number" min="1" max="30" value="10" />
-            </label>
+      <section id="calculadora" class="container calculator-wrap">
+        <div class="calculator-card glass card-raise">
+          <img class="jaguar-mark jaguar-calc" src="jaguar-symbol.svg" alt="" aria-hidden="true" />
+          <p class="calc-progress" data-i18n="calcProgress">Simulador para Costa Rica</p>
+          <h2 data-i18n="calcTitle">¿Cuanto necesitas?</h2>
+          <p data-i18n="calcText">Mueve el control para estimar tu cuota mensual.</p>
+
+          <div class="currency-toggle" role="tablist" aria-label="Moneda">
+            <button type="button" class="currency-btn active" data-currency="CRC">CRC</button>
+            <button type="button" class="currency-btn" data-currency="USD">USD</button>
           </div>
+
+          <div class="amount-display">
+            <span id="calcAmountLabel">₡</span><strong id="calcAmountValue">0</strong>
+          </div>
+
+          <div class="range-meta">
+            <small><span data-i18n="calcMin">Minimo</span>: <span id="rangeMin">₡0</span></small>
+            <small><span data-i18n="calcMax">Maximo</span>: <span id="rangeMax">₡0</span></small>
+          </div>
+          <input id="calcRange" class="calc-range" type="range" />
+
+          <p class="term-title" data-i18n="calcTermQuestion">Plazo base</p>
+          <div class="term-fixed">
+            <span class="term-pill">2 años</span>
+          </div>
+
+          <div class="calc-result">
+            <p data-i18n="resultLabel">Cuota mensual estimada</p>
+            <h3 id="monthlyResult">$0.00</h3>
+            <small id="rateNote" data-i18n="rateNote">Cuota estimada de interés mensual.</small>
+          </div>
+
           <div class="actions-row">
-            <button id="calcBtn" class="btn btn-primary" data-i18n="calcButton">Calcular</button>
-            <a href="#solicitud" class="btn btn-soft" data-i18n="calcApply">Aplicar con este monto</a>
+            <a href="#solicitud" class="btn btn-primary" data-i18n="calcApply">Aplicar con este monto</a>
           </div>
-        </div>
-        <div class="calc-result glass card-raise">
-          <p data-i18n="resultLabel">Cuota mensual estimada</p>
-          <h3 id="monthlyResult">$0.00</h3>
-          <div class="result-grid">
-            <div>
-              <span data-i18n="resultTotal">Total a pagar</span>
-              <strong id="totalResult">$0.00</strong>
-            </div>
-            <div>
-              <span data-i18n="resultInterest">Interes total</span>
-              <strong id="interestResult">$0.00</strong>
-            </div>
-          </div>
+
           <small data-i18n="resultDisclaimer"
             >Esta calculadora es informativa y no sustituye una oferta formal.</small
           >
@@ -127,6 +193,7 @@
       </section>
 
       <section id="solicitud" class="container form-section">
+        <img class="jaguar-mark jaguar-form" src="jaguar-symbol.svg" alt="" aria-hidden="true" />
         <div class="section-head">
           <h2 data-i18n="formTitle">Solicitud de prestamo hipotecario</h2>
           <p data-i18n="formText">
@@ -134,30 +201,50 @@
           </p>
         </div>
 
-        <form id="loanForm" class="loan-form glass card-raise">
+        <form id="loanForm" class="loan-form glass card-raise" autocomplete="off">
           <label>
             <span data-i18n="fName">Nombre completo</span>
-            <input name="nombreCompleto" required />
+            <input name="nombreCompleto" maxlength="40" required />
           </label>
           <label>
             <span data-i18n="fId">Numero de cedula</span>
-            <input name="cedula" required />
+            <input name="cedula" inputmode="numeric" pattern="[0-9]{1,11}" maxlength="11" required />
           </label>
           <label>
             <span data-i18n="fPhoneMain">Telefono principal</span>
-            <input name="telefonoPrincipal" required />
+            <input
+              name="telefonoPrincipal"
+              inputmode="numeric"
+              pattern="[0-9]{8}"
+              maxlength="8"
+              required
+            />
           </label>
           <label>
             <span data-i18n="fPhoneSec">Telefono secundario</span>
-            <input name="telefonoSecundario" />
+            <input name="telefonoSecundario" inputmode="numeric" pattern="[0-9]{8}" maxlength="8" />
           </label>
           <label>
             <span data-i18n="fEmail">Correo electronico</span>
-            <input type="email" name="correo" required />
+            <input type="email" name="correo" maxlength="50" required />
           </label>
           <label>
-            <span data-i18n="fAmount">Cantidad solicitada (USD)</span>
-            <input type="number" name="montoPrestamo" required />
+            <span data-i18n="fAmount">Cantidad solicitada</span>
+            <div class="money-field">
+              <input
+                type="text"
+                name="montoPrestamo"
+                inputmode="numeric"
+                placeholder="10.000.000"
+                autocomplete="off"
+                required
+              />
+              <select name="monedaMontoPrestamo" required>
+                <option value="CRC" data-i18n="currencyCRC">Colones (CRC)</option>
+                <option value="USD" data-i18n="currencyUSD">Dolares (USD)</option>
+              </select>
+            </div>
+            <small class="field-help" id="montoPreview">₡0</small>
           </label>
           <label>
             <span data-i18n="fPropertyType">Tipo de propiedad a hipotecar</span>
@@ -170,29 +257,52 @@
             </select>
           </label>
           <label>
-            <span data-i18n="fPropertySize">Tamano de la propiedad</span>
-            <input name="tamanoPropiedad" placeholder="m2 / ft2" required />
+            <span data-i18n="fLandRecord">Número de finca o plano catastrado</span>
+            <input name="numeroFincaPlano" maxlength="60" placeholder="Ej. 1-123456-000" />
           </label>
           <label>
-            <span data-i18n="fFiscal">Valor fiscal de la propiedad (USD)</span>
-            <input type="number" name="valorFiscal" required />
+            <span data-i18n="fPropertySize">Tamano de la propiedad (m²)</span>
+            <input
+              type="number"
+              name="tamanoPropiedad"
+              placeholder="m²"
+              min="1"
+              max="50000"
+              step="1"
+              required
+            />
           </label>
           <label>
-            <span data-i18n="fLocation">Ubicacion de la propiedad</span>
-            <input name="ubicacion" />
+            <span data-i18n="fFiscal">Valor fiscal de la propiedad</span>
+            <div class="money-field">
+              <input type="number" name="valorFiscal" min="0" step="1" value="0" required />
+              <select name="monedaValorFiscal" required>
+                <option value="CRC" data-i18n="currencyCRC">Colones (CRC)</option>
+                <option value="USD" data-i18n="currencyUSD">Dolares (USD)</option>
+              </select>
+            </div>
+            <small class="field-help" id="fiscalPreview">₡0</small>
+            <small class="field-help">
+              <span data-i18n="fFiscalMinPrefix">Mínimo recomendado:</span>
+              <strong id="fiscalMinHint">₡0</strong>
+            </small>
           </label>
-          <label>
-            <span data-i18n="fIncome">Ingreso mensual aproximado (USD)</span>
-            <input type="number" name="ingresoMensual" />
+          <label class="location-left">
+            <span data-i18n="fProvince">Provincia</span>
+            <select name="provincia" id="provinciaSelect" required>
+              <option value="" data-i18n="fSelectProvince">Seleccionar provincia</option>
+            </select>
           </label>
-          <label>
-            <span data-i18n="fDebts">Deudas actuales</span>
-            <input name="deudasActuales" />
+          <label class="location-left">
+            <span data-i18n="fCanton">Cantón</span>
+            <select name="canton" id="cantonSelect" required>
+              <option value="" data-i18n="fSelectCanton">Seleccionar cantón</option>
+            </select>
           </label>
-          <label class="full">
-            <span data-i18n="fNotes">Comentarios adicionales</span>
-            <textarea name="comentarios" rows="4"></textarea>
-          </label>
+          <div class="full captcha-block">
+            <div id="captchaContainer" class="captcha-box" aria-live="polite"></div>
+            <input type="hidden" id="captchaToken" name="captchaToken" />
+          </div>
           <button class="btn btn-primary full" type="submit" data-i18n="formSubmit">
             Enviar solicitud
           </button>
@@ -201,11 +311,97 @@
       </section>
 
       <section id="testimonios" class="container testimonials">
+        <img class="jaguar-mark jaguar-test" src="jaguar-symbol.svg" alt="" aria-hidden="true" />
         <div class="section-head">
           <h2 data-i18n="testTitle">Testimonios</h2>
-          <p data-i18n="testText">Experiencias de clientes que valoraron la rapidez y el trato humano.</p>
+          <p data-i18n="testText">Experiencias reales frente a las trabas de la banca tradicional.</p>
         </div>
-        <div id="testimonialTrack" class="testimonial-track"></div>
+        <div class="testimonial-carousel">
+          <button id="testPrev" class="carousel-btn" type="button" aria-label="Anterior">‹</button>
+          <div id="testimonialTrack" class="testimonial-track"></div>
+          <button id="testNext" class="carousel-btn" type="button" aria-label="Siguiente">›</button>
+        </div>
+        <div id="testimonialDots" class="testimonial-dots" aria-label="Indicadores"></div>
+      </section>
+
+      <section id="cobertura" class="container seo-local glass card-raise">
+        <div class="section-head">
+          <h2>Préstamos hipotecarios por provincia en Costa Rica</h2>
+          <p>
+            Evaluamos operaciones en todo el país. Si busca liquidez con garantía hipotecaria, podemos atender
+            propiedades dentro y fuera del GAM.
+          </p>
+        </div>
+        <div class="local-grid">
+          <article>
+            <h3>Préstamos hipotecarios en San José</h3>
+            <p>Casas, apartamentos, lotes y propiedades comerciales con acompañamiento ágil y transparente.</p>
+            <a href="#solicitud" class="mini-link">Solicitar evaluación</a>
+          </article>
+          <article>
+            <h3>Préstamos hipotecarios en Heredia</h3>
+            <p>Opciones para personas físicas, independientes y empresas con respuesta rápida.</p>
+            <a href="#solicitud" class="mini-link">Solicitar evaluación</a>
+          </article>
+          <article>
+            <h3>Préstamos hipotecarios en Cartago</h3>
+            <p>Financiamiento con garantía de inmueble para liquidez, inversión o capital de trabajo.</p>
+            <a href="#solicitud" class="mini-link">Solicitar evaluación</a>
+          </article>
+          <article>
+            <h3>Préstamos hipotecarios en Alajuela</h3>
+            <p>Formalización clara para propiedades residenciales y comerciales en toda la provincia.</p>
+            <a href="#solicitud" class="mini-link">Solicitar evaluación</a>
+          </article>
+          <article>
+            <h3>Préstamos hipotecarios en Guanacaste</h3>
+            <p>Atendemos casos fuera del GAM con evaluación profesional y seguimiento continuo.</p>
+            <a href="#solicitud" class="mini-link">Solicitar evaluación</a>
+          </article>
+          <article>
+            <h3>Préstamos hipotecarios en Puntarenas</h3>
+            <p>Cobertura nacional para propiedades inscritas, con proceso legal y transparente.</p>
+            <a href="#solicitud" class="mini-link">Solicitar evaluación</a>
+          </article>
+          <article>
+            <h3>Préstamos hipotecarios en Limón</h3>
+            <p>Atención para propiedades en el Caribe con acompañamiento claro de inicio a formalización.</p>
+            <a href="#solicitud" class="mini-link">Solicitar evaluación</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="faq" class="container faq-wrap">
+        <div class="section-head">
+          <h2>Preguntas frecuentes</h2>
+          <p>Respuestas directas a las dudas más comunes antes de solicitar su evaluación.</p>
+        </div>
+        <div class="faq-list glass card-raise">
+          <details open>
+            <summary>¿Puedo solicitar si mi propiedad está fuera del GAM?</summary>
+            <p>Sí. Atendemos operaciones dentro y fuera del Gran Área Metropolitana en todo Costa Rica.</p>
+          </details>
+          <details>
+            <summary>¿Trabajan con independientes y empresas?</summary>
+            <p>Sí. Evaluamos personas físicas, trabajadores independientes y personas jurídicas.</p>
+          </details>
+          <details>
+            <summary>¿Cuánto tarda la evaluación inicial?</summary>
+            <p>La evaluación inicial se entrega en un plazo máximo de 24 horas.</p>
+          </details>
+          <details>
+            <summary>¿Qué tipo de propiedades aplican como garantía?</summary>
+            <p>Casas, apartamentos, lotes y propiedades comerciales inscritas en Costa Rica.</p>
+          </details>
+          <details>
+            <summary>¿Puedo cancelar antes de tiempo?</summary>
+            <p>Sí, según las condiciones acordadas en su formalización. Le explicamos este punto desde el inicio.</p>
+          </details>
+          <details>
+            <summary>¿Qué documentación mínima solicitan?</summary>
+            <p>Datos personales o de empresa, información del inmueble y monto requerido para iniciar evaluación.</p>
+          </details>
+        </div>
       </section>
     </main>
 
@@ -213,6 +409,7 @@
       <p>© <span id="year"></span> Prestamos Jaguar</p>
     </footer>
 
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
     <script src="app.js"></script>
   </body>
 </html>
