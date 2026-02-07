@@ -17,7 +17,7 @@ const translations = {
     heroMetric1Label: 'Clientes atendidos',
     heroMetric1Value: '+500 operaciones en Costa Rica',
     heroMetric2Label: '¿A quién financiamos?',
-    heroMetric2Value: 'Personas y Empresas',
+    heroMetric2Value: 'Nacionales y extranjeros',
     heroMetric3Label: 'Destino del financiamiento',
     heroMetric3Value: 'Capital de trabajo, liquidez o inversión',
     heroMetric4Label: 'Ubicación de la propiedad',
@@ -91,7 +91,7 @@ const translations = {
     heroMetric1Label: 'Clients served',
     heroMetric1Value: '500+ operations in Costa Rica',
     heroMetric2Label: 'Who we finance',
-    heroMetric2Value: 'Individuals and Companies',
+    heroMetric2Value: 'Nationals and foreigners',
     heroMetric3Label: 'Use of financing',
     heroMetric3Value: 'Working capital, liquidity or investment',
     heroMetric4Label: 'Property location',
@@ -165,7 +165,7 @@ const translations = {
     heroMetric1Label: 'Clients servis',
     heroMetric1Value: '500+ opérations au Costa Rica',
     heroMetric2Label: 'Qui finançons-nous',
-    heroMetric2Value: 'Particuliers et entreprises',
+    heroMetric2Value: 'Nationaux et étrangers',
     heroMetric3Label: 'Destination du financement',
     heroMetric3Value: 'Fonds de roulement, liquidité ou investissement',
     heroMetric4Label: 'Localisation de la propriété',
@@ -767,11 +767,25 @@ function populateCantons(province, selected = '') {
   });
 }
 
+function cacheDefaultI18nText() {
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    if (typeof el.dataset.i18nDefault === 'undefined') {
+      el.dataset.i18nDefault = el.textContent;
+    }
+  });
+}
+
 function applyTranslations() {
   document.documentElement.lang = currentLang;
 
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const key = el.getAttribute('data-i18n');
+    if (currentLang === 'es') {
+      if (typeof el.dataset.i18nDefault !== 'undefined') {
+        el.textContent = el.dataset.i18nDefault;
+      }
+      return;
+    }
     const text = translations[currentLang][key];
     if (typeof text !== 'undefined') el.textContent = text;
   });
@@ -933,6 +947,7 @@ window.addEventListener('pageshow', () => {
 });
 
 yearEl.textContent = new Date().getFullYear();
+cacheDefaultI18nText();
 populateProvinces();
 initCaptchaConfig();
 applyTranslations();

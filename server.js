@@ -6,7 +6,20 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use(express.static('public'));
+app.disable('etag');
+app.use(
+  express.static('public', {
+    etag: false,
+    lastModified: false,
+    setHeaders(res, filePath) {
+      if (/\.(html|js|css)$/i.test(filePath)) {
+        res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+        res.setHeader('Pragma', 'no-cache');
+        res.setHeader('Expires', '0');
+      }
+    }
+  })
+);
 
 const moneyRanges = {
   CRC: { min: 10000000, max: 100000000 },
