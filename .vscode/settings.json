@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/e7f6d7a9-fd6d-4130-99a6-f32e253fa897/resourceGroups/prestamos/providers/Microsoft.Web/sites/prestamosjaguar",
+    "appService.deploySubpath": "."
+}
