@@ -567,6 +567,7 @@ h1 {
 label {
   display: grid;
   gap: 6px;
+  align-content: start;
 }
 
 label span {
@@ -575,17 +576,53 @@ label span {
   color: #1e293b;
 }
 
+.field-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.req-mark {
+  color: #dc2626;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.optional-mark {
+  color: #475569;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  border-radius: 999px;
+  padding: 2px 8px;
+  line-height: 1.2;
+}
+
 input,
 select:not(.lang-select),
 textarea {
   width: 100%;
   border-radius: 12px;
   border: 1px solid rgba(148, 163, 184, 0.36);
-  padding: 11px 12px;
+  padding: 12px 14px;
+  min-height: 46px;
+  line-height: 1.25;
   font-size: 0.95rem;
   font-family: inherit;
   color: var(--ink);
   background: var(--glass-solid);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+input[type='number'] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .money-field {
@@ -596,6 +633,21 @@ textarea {
 
 .money-field select {
   min-width: 130px;
+  min-height: 46px;
+}
+
+.loan-form input[name='tamanoPropiedad'] {
+  height: 46px;
+  min-height: 46px;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  border-color: rgba(33, 89, 255, 0.72);
+  box-shadow: 0 0 0 3px rgba(33, 89, 255, 0.16);
+  background: #ffffff;
 }
 
 .field-help {
@@ -604,6 +656,11 @@ textarea {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+}
+
+.field-help.subtle {
+  color: #64748b;
+  font-size: 0.78rem;
 }
 
 .calc-result {
@@ -683,6 +740,17 @@ textarea {
   gap: 12px;
 }
 
+.form-group-title {
+  margin: 4px 0 2px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(148, 163, 184, 0.22);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #1e3a8a;
+}
+
 .full {
   grid-column: 1 / -1;
 }
@@ -699,14 +767,47 @@ textarea {
 .form-status {
   margin: 0;
   font-weight: 700;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+}
+
+.form-status:empty {
+  display: none;
 }
 
 .form-status.ok {
-  color: #8af0be;
+  color: #14532d;
+  background: #dcfce7;
+  border-color: #86efac;
 }
 
 .form-status.error {
-  color: #ffc5c5;
+  color: #7f1d1d;
+  background: #fee2e2;
+  border-color: #fca5a5;
+}
+
+.loan-form .btn-primary[type='submit'] {
+  min-height: 58px;
+  padding: 15px 24px;
+  font-size: 1.02rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  background: linear-gradient(160deg, #174ef7, #0d3dc0);
+  box-shadow: 0 16px 30px rgba(23, 78, 247, 0.28);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
+}
+
+.loan-form .btn-primary[type='submit']:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 34px rgba(23, 78, 247, 0.34);
+  filter: saturate(1.06);
+}
+
+.loan-form .btn-primary[type='submit']:active {
+  transform: translateY(0);
+  box-shadow: 0 12px 22px rgba(23, 78, 247, 0.24);
 }
 
 .testimonials {

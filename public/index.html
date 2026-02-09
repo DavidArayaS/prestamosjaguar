@@ -210,16 +210,29 @@
         </div>
 
         <form id="loanForm" class="loan-form glass card-raise" autocomplete="off">
+          <p class="full form-group-title" data-i18n="formGroupPersonal">Datos personales</p>
           <label>
-            <span data-i18n="fName">Nombre completo</span>
+            <span class="field-label">
+              <span data-i18n="fName">Nombre completo</span>
+              <small class="req-mark" aria-hidden="true">*</small>
+            </span>
             <input name="nombreCompleto" maxlength="40" required />
           </label>
           <label>
-            <span data-i18n="fId">Numero de cedula</span>
+            <span class="field-label">
+              <span data-i18n="fId">Numero de cedula</span>
+              <small class="req-mark" aria-hidden="true">*</small>
+            </span>
             <input name="cedula" inputmode="numeric" pattern="[0-9]{1,11}" maxlength="11" required />
+            <small class="field-help subtle" data-i18n="fIdHint">
+              Ingrese solo numeros, incluyendo ceros iniciales (sin guiones).
+            </small>
           </label>
           <label>
-            <span data-i18n="fPhoneMain">Telefono principal</span>
+            <span class="field-label">
+              <span data-i18n="fPhoneMain">Telefono principal</span>
+              <small class="req-mark" aria-hidden="true">*</small>
+            </span>
             <input
               name="telefonoPrincipal"
               inputmode="numeric"
@@ -229,15 +242,26 @@
             />
           </label>
           <label>
-            <span data-i18n="fPhoneSec">Telefono secundario</span>
+            <span class="field-label">
+              <span data-i18n="fPhoneSec">Telefono secundario</span>
+              <small class="optional-mark" data-i18n="optionalLabel">Opcional</small>
+            </span>
             <input name="telefonoSecundario" inputmode="numeric" pattern="[0-9]{8}" maxlength="8" />
           </label>
-          <label>
-            <span data-i18n="fEmail">Correo electronico</span>
+          <label class="full">
+            <span class="field-label">
+              <span data-i18n="fEmail">Correo electronico</span>
+              <small class="req-mark" aria-hidden="true">*</small>
+            </span>
             <input type="email" name="correo" maxlength="50" required />
           </label>
+
+          <p class="full form-group-title" data-i18n="formGroupLoan">Datos del prestamo</p>
           <label>
-            <span data-i18n="fAmount">Cantidad solicitada</span>
+            <span class="field-label">
+              <span data-i18n="fAmount">Cantidad solicitada</span>
+              <small class="req-mark" aria-hidden="true">*</small>
+            </span>
             <div class="money-field">
               <input
                 type="text"
@@ -255,7 +279,10 @@
             <small class="field-help" id="montoPreview">₡0</small>
           </label>
           <label>
-            <span data-i18n="fPropertyType">Tipo de propiedad a hipotecar</span>
+            <span class="field-label">
+              <span data-i18n="fPropertyType">Tipo de propiedad a hipotecar</span>
+              <small class="req-mark" aria-hidden="true">*</small>
+            </span>
             <select name="tipoPropiedad" required>
               <option value="" data-i18n="fSelect">Seleccionar</option>
               <option value="Casa" data-i18n="fHouse">Casa</option>
@@ -264,24 +291,13 @@
               <option value="Comercial" data-i18n="fCommercial">Comercial</option>
             </select>
           </label>
+
+          <p class="full form-group-title" data-i18n="formGroupProperty">Datos de la propiedad</p>
           <label>
-            <span data-i18n="fLandRecord">Número de finca o plano catastrado</span>
-            <input name="numeroFincaPlano" maxlength="60" placeholder="Ej. 1-123456-000" />
-          </label>
-          <label>
-            <span data-i18n="fPropertySize">Tamano de la propiedad (m²)</span>
-            <input
-              type="number"
-              name="tamanoPropiedad"
-              placeholder="m²"
-              min="1"
-              max="50000"
-              step="1"
-              required
-            />
-          </label>
-          <label>
-            <span data-i18n="fFiscal">Valor fiscal de la propiedad</span>
+            <span class="field-label">
+              <span data-i18n="fFiscal">Valor fiscal de la propiedad</span>
+              <small class="req-mark" aria-hidden="true">*</small>
+            </span>
             <div class="money-field">
               <input type="number" name="valorFiscal" min="0" step="1" value="0" required />
               <select name="monedaValorFiscal" required>
@@ -295,14 +311,48 @@
               <strong id="fiscalMinHint">₡0</strong>
             </small>
           </label>
+          <label>
+            <span class="field-label">
+              <span data-i18n="fPropertySize">Tamano de la propiedad (m²)</span>
+              <small class="req-mark" aria-hidden="true">*</small>
+            </span>
+            <input
+              type="number"
+              name="tamanoPropiedad"
+              placeholder="m²"
+              min="1"
+              max="50000"
+              step="1"
+              required
+            />
+          </label>
+          <label>
+            <span class="field-label">
+              <span data-i18n="fLandRecord">Número de finca o plano catastrado</span>
+              <small class="req-mark" aria-hidden="true">*</small>
+            </span>
+            <input
+              name="numeroFincaPlano"
+              maxlength="20"
+              pattern="[A-Za-z0-9-]{1,20}"
+              placeholder="Ej. 1-123456-000"
+              required
+            />
+          </label>
           <label class="location-left">
-            <span data-i18n="fProvince">Provincia</span>
+            <span class="field-label">
+              <span data-i18n="fProvince">Provincia</span>
+              <small class="req-mark" aria-hidden="true">*</small>
+            </span>
             <select name="provincia" id="provinciaSelect" required>
               <option value="" data-i18n="fSelectProvince">Seleccionar provincia</option>
             </select>
           </label>
           <label class="location-left">
-            <span data-i18n="fCanton">Cantón</span>
+            <span class="field-label">
+              <span data-i18n="fCanton">Cantón</span>
+              <small class="req-mark" aria-hidden="true">*</small>
+            </span>
             <select name="canton" id="cantonSelect" required>
               <option value="" data-i18n="fSelectCanton">Seleccionar cantón</option>
             </select>

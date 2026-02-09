@@ -81,11 +81,11 @@ function inLength(value, maxLen) {
 }
 
 function validLandRecord(value) {
-  if (typeof value === 'undefined' || value === null) return true;
+  if (typeof value === 'undefined' || value === null) return false;
   const cleaned = String(value).trim();
-  if (cleaned.length === 0) return true;
-  if (cleaned.length > 60) return false;
-  return /^[A-Za-z0-9\-/. ]+$/.test(cleaned);
+  if (cleaned.length === 0) return false;
+  if (cleaned.length > 20) return false;
+  return /^[A-Za-z0-9-]+$/.test(cleaned);
 }
 
 function validPropertySize(value) {
@@ -142,6 +142,7 @@ app.post('/api/solicitud', async (req, res) => {
     'montoPrestamo',
     'monedaMontoPrestamo',
     'tipoPropiedad',
+    'numeroFincaPlano',
     'tamanoPropiedad',
     'valorFiscal',
     'monedaValorFiscal',
@@ -190,7 +191,9 @@ app.post('/api/solicitud', async (req, res) => {
     return res.status(400).json({ ok: false, message: 'Tamaño de propiedad invalido (maximo 50000 m2).' });
   }
   if (!validLandRecord(data.numeroFincaPlano)) {
-    return res.status(400).json({ ok: false, message: 'Número de finca/plano invalido (maximo 60 caracteres).' });
+    return res
+      .status(400)
+      .json({ ok: false, message: 'Número de finca/plano invalido (1 a 20 caracteres: letras, numeros y guiones).' });
   }
 
   if (
