@@ -1,21 +1,61 @@
 require('dotenv').config();
 const express = require('express');
+const helmet = require('helmet');
+const rateLimit = require('express-rate-limit');
 const nodemailer = require('nodemailer');
 
 const app = express();
 const port = process.env.PORT || 3000;
+const isProduction = process.env.NODE_ENV === 'production';
 
-app.use(express.json());
-app.disable('etag');
+app.disable('x-powered-by');
+app.set('trust proxy', 1);
+
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      useDefaults: true,
+      directives: {
+        'script-src': ["'self'", "'unsafe-inline'", 'https://challenges.cloudflare.com'],
+        'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
+        'font-src': ["'self'", 'https://fonts.gstatic.com', 'data:'],
+        'img-src': ["'self'", 'data:'],
+        'connect-src': ["'self'", 'https://challenges.cloudflare.com'],
+        'frame-src': ["'self'", 'https://challenges.cloudflare.com']
+      }
+    },
+    crossOriginEmbedderPolicy: false
+  })
+);
+
+const solicitudLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: isProduction ? 40 : 200,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: {
+    ok: false,
+    message: 'Demasiadas solicitudes. Intenta nuevamente en unos minutos.'
+  }
+});
+
+app.use(express.json({ limit: '64kb' }));
+app.use(express.urlencoded({ extended: false, limit: '64kb' }));
 app.use(
   express.static('public', {
-    etag: false,
-    lastModified: false,
+    etag: isProduction,
+    lastModified: isProduction,
+    maxAge: isProduction ? '1h' : 0,
     setHeaders(res, filePath) {
-      if (/\.(html|js|css)$/i.test(filePath)) {
+      if (/\.html$/i.test(filePath)) {
         res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
         res.setHeader('Pragma', 'no-cache');
         res.setHeader('Expires', '0');
+        return;
+      }
+
+      if (isProduction && /\.(js|css|svg|png|jpg|jpeg|webp|ico)$/i.test(filePath)) {
+        res.setHeader('Cache-Control', 'public, max-age=3600');
       }
     }
   })
@@ -131,6 +171,8 @@ app.get('/api/public-config', (_req, res) => {
     turnstileSiteKey: process.env.TURNSTILE_SITE_KEY || ''
   });
 });
+
+app.use('/api/solicitud', solicitudLimiter);
 
 app.post('/api/solicitud', async (req, res) => {
   const data = req.body || {};
