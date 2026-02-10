@@ -1078,8 +1078,33 @@ function resetUiState() {
   calculateLoan();
 }
 
+function scrollToSectionById(sectionId) {
+  const id = String(sectionId || '').replace(/^#/, '');
+  if (!id) return false;
+  const target = document.getElementById(id);
+  if (!target) return false;
+
+  const topbar = document.querySelector('.topbar');
+  const headerOffset = topbar ? topbar.getBoundingClientRect().height + 24 : 110;
+  const targetTop = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+  window.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
+  return true;
+}
+
+function applySectionFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const sectionFromQuery = params.get('section');
+  const sectionFromHash = window.location.hash ? window.location.hash.slice(1) : '';
+  const section = sectionFromQuery || sectionFromHash;
+  if (!section) return;
+  setTimeout(() => {
+    scrollToSectionById(section);
+  }, 120);
+}
+
 window.addEventListener('pageshow', () => {
   resetUiState();
+  applySectionFromUrl();
 });
 
 yearEl.textContent = new Date().getFullYear();
@@ -1089,3 +1114,4 @@ initCaptchaConfig();
 applyTranslations();
 resetUiState();
 startCarouselTimer();
+applySectionFromUrl();
