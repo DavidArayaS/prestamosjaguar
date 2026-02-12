@@ -115,7 +115,10 @@ const translations = {
     faqQ7: '¿Puedo cancelar antes de tiempo?',
     faqA7: 'Sí, según las condiciones acordadas en su formalización. Le explicamos este punto desde el inicio.',
     faqQ8: '¿Qué documentación mínima solicitan?',
-    faqA8: 'Datos personales o de empresa, información del inmueble y monto requerido para iniciar evaluación.'
+    faqA8: 'Datos personales o de empresa, información del inmueble y monto requerido para iniciar evaluación.',
+    faqQ9: '¿Qué pasa con mi información personal?',
+    faqA9:
+      'La información suministrada será tratada de forma confidencial y utilizada únicamente para fines de evaluación crediticia, conforme a la Ley 8968 de protección de datos personales.'
   },
   en: {
     navHome: 'Home',
@@ -233,7 +236,10 @@ const translations = {
     faqQ7: 'Can I repay early?',
     faqA7: 'Yes, according to the conditions agreed during formalization. We explain this point from the start.',
     faqQ8: 'What minimum documentation do you require?',
-    faqA8: 'Personal or company information, property details and requested amount to begin the evaluation.'
+    faqA8: 'Personal or company information, property details and requested amount to begin the evaluation.',
+    faqQ9: 'What happens to my personal information?',
+    faqA9:
+      'The information provided will be treated confidentially and used only for credit evaluation purposes, in accordance with Law 8968 on personal data protection.'
   },
   fr: {
     navHome: 'Accueil',
@@ -351,7 +357,10 @@ const translations = {
     faqQ7: 'Puis-je rembourser par anticipation ?',
     faqA7: 'Oui, selon les conditions convenues lors de la formalisation. Nous expliquons ce point dès le début.',
     faqQ8: 'Quelle documentation minimale demandez-vous ?',
-    faqA8: 'Données personnelles ou de l’entreprise, informations du bien et montant demandé pour démarrer l’évaluation.'
+    faqA8: 'Données personnelles ou de l’entreprise, informations du bien et montant demandé pour démarrer l’évaluation.',
+    faqQ9: 'Que se passe-t-il avec mes informations personnelles ?',
+    faqA9:
+      'Les informations fournies seront traitées de manière confidentielle et utilisées uniquement à des fins d’évaluation de crédit, conformément à la Loi 8968 sur la protection des données personnelles.'
   }
 };
 
