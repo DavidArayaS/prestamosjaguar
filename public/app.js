@@ -7,6 +7,7 @@ const translations = {
     navForm: 'Solicitud',
     navFaq: 'FAQ',
     navTestimonials: 'Testimonios',
+    navFacebook: 'Facebook',
     heroKicker: 'Préstamos hipotecarios en Costa Rica',
     heroTitle: 'Préstamos sobre casas, lotes y propiedades comerciales',
     heroText:
@@ -128,6 +129,7 @@ const translations = {
     navForm: 'Application',
     navFaq: 'FAQ',
     navTestimonials: 'Testimonials',
+    navFacebook: 'Facebook',
     heroKicker: 'Mortgage Loans in Costa Rica',
     heroTitle: 'Loans backed by residential and commercial properties',
     heroText:
@@ -249,6 +251,7 @@ const translations = {
     navForm: 'Demande',
     navFaq: 'FAQ',
     navTestimonials: 'Témoignages',
+    navFacebook: 'Facebook',
     heroKicker: 'Prêts hypothécaires au Costa Rica',
     heroTitle: 'Prêts garantis par maisons, terrains et biens commerciaux',
     heroText:
