@@ -724,14 +724,37 @@ textarea:focus-visible {
   padding: 10px 12px;
 }
 
+.faq-list details.faq-featured {
+  padding: 16px 18px;
+  border: 1px solid rgba(33, 89, 255, 0.42);
+  background: linear-gradient(145deg, rgba(241, 247, 255, 0.95), rgba(255, 255, 255, 0.94));
+  box-shadow: 0 12px 28px rgba(33, 89, 255, 0.12);
+}
+
 .faq-list summary {
   cursor: pointer;
   font-weight: 800;
 }
 
+.faq-list details.faq-featured summary {
+  font-size: 1.04rem;
+}
+
 .faq-list p {
   margin: 8px 0 0;
   color: var(--text-soft);
+}
+
+.faq-featured-content p {
+  margin: 10px 0 0;
+  font-size: 0.98rem;
+  color: #1f2c43;
+}
+
+.faq-link {
+  font-weight: 800;
+  color: #1748c6;
+  text-decoration: underline;
 }
 
 .loan-form {

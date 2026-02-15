@@ -103,7 +103,7 @@ const translations = {
     faqText: 'Respuestas directas a las dudas más comunes antes de solicitar su evaluación.',
     faqQ1: '¿Cuáles son los requisitos para solicitar un prestamo?',
     faqA1:
-      'El requisito principal es ser propietario de la propiedad por la cual desea solicitar el préstamo y rellenar nuestro formulario en esta pagina web para que un agente le contacte.',
+      'Para aplicar, usted debe ser propietario de una casa, lote, apartamento o propiedad comercial en Costa Rica. El financiamiento se otorga dejando la propiedad hipotecada como garantía durante el plazo del préstamo. Si no es dueño registral, no es posible avanzar. Para iniciar el análisis, complete el formulario en esta página. Con esa información un asesor podrá revisar la viabilidad y contactarle.',
     faqQ2: '¿Puedo solicitar un crédito siendo extranjero?',
     faqA2: 'Sí. Atendemos a clientes de todas las nacionalidades dueñas de propiedades en Costa Rica.',
     faqQ3: '¿Trabajan con independientes y empresas?',
