@@ -9,9 +9,9 @@ const translations = {
     navTestimonials: 'Testimonios',
     navFacebook: 'Facebook',
     heroKicker: 'Préstamos hipotecarios en Costa Rica',
-    heroTitle: 'Préstamos sobre casas, lotes y propiedades comerciales',
+    heroTitle: 'Préstamos sobre casas, apartamentos, bodegas y propiedades comerciales',
     heroText:
-      'Obtenga liquidez usando su casa, apartamento, lote o propiedad comercial como respaldo. Préstamos hipotecarios en Costa Rica con cobertura nacional, proceso legal y transparente. Respuesta inicial en un plazo máximo de 24 horas.',
+      'Obtenga liquidez usando su casa, apartamento, bodega o propiedad comercial como respaldo. Préstamos hipotecarios en Costa Rica con cobertura nacional, proceso legal y transparente. Respuesta inicial en un plazo máximo de 24 horas.',
     heroCtaApply: 'Solicitar evaluación',
     heroCtaCalc: 'Calcular cuota',
     heroPanelTitle: 'Datos clave',
@@ -24,7 +24,7 @@ const translations = {
     heroMetric4Label: 'Ubicación de la propiedad',
     heroMetric4Value: 'Dentro y fuera del GAM',
     trustTitle1: '¿Qué propiedades aplican?',
-    trustText1: 'Casas, apartamentos, lotes y propiedades comerciales inscritas, ubicadas en cualquier zona de Costa Rica.',
+    trustText1: 'Casas, apartamentos, bodegas y propiedades comerciales inscritas, ubicadas en cualquier zona de Costa Rica.',
     trustTitle2: '¿Cómo funciona un préstamo hipotecario?',
     trustText2: 'Su propiedad se utiliza como garantía para acceder a financiamiento, con plazos y condiciones definidos según el valor del inmueble.',
     trustTitle3: 'Proceso claro y acompañado',
@@ -54,7 +54,7 @@ const translations = {
     fSelect: 'Seleccionar',
     fHouse: 'Casa',
     fApartment: 'Apartamento',
-    fLand: 'Terreno',
+    fLand: 'Bodega',
     fCommercial: 'Comercial',
     fLandRecord: 'Número de finca o plano catastrado',
     fPropertySize: 'Tamaño de la propiedad (m²)',
@@ -85,7 +85,7 @@ const translations = {
     coverageText:
       'Evaluamos operaciones en todo el país. Si busca liquidez con garantía hipotecaria, podemos atender propiedades dentro y fuera del GAM.',
     coverageCard1Title: 'Préstamos hipotecarios en San José',
-    coverageCard1Text: 'Casas, apartamentos, lotes y propiedades comerciales con acompañamiento ágil y transparente.',
+    coverageCard1Text: 'Casas, apartamentos, bodegas y propiedades comerciales con acompañamiento ágil y transparente.',
     coverageCard2Title: 'Préstamos hipotecarios en Heredia',
     coverageCard2Text: 'Opciones para personas físicas, independientes y empresas con respuesta rápida.',
     coverageCard3Title: 'Préstamos hipotecarios en Cartago',
@@ -103,7 +103,7 @@ const translations = {
     faqText: 'Respuestas directas a las dudas más comunes antes de solicitar su evaluación.',
     faqQ1: '¿Cuáles son los requisitos para solicitar un prestamo?',
     faqA1:
-      'Para aplicar, usted debe ser propietario de una casa, lote, apartamento o propiedad comercial en Costa Rica. El financiamiento se otorga dejando la propiedad hipotecada como garantía durante el plazo del préstamo. Si no es dueño registral, no es posible avanzar. Para iniciar el análisis, complete el formulario en esta página. Con esa información un asesor podrá revisar la viabilidad y contactarle.',
+      'Para aplicar, usted debe ser propietario de una casa, apartamento, bodega o propiedad comercial en Costa Rica. El financiamiento se otorga dejando la propiedad hipotecada como garantía durante el plazo del préstamo. Si no es dueño registral, no es posible avanzar. Para iniciar el análisis, complete el formulario en esta página. Con esa información un asesor podrá revisar la viabilidad y contactarle.',
     faqQ2: '¿Puedo solicitar un crédito siendo extranjero?',
     faqA2: 'Sí. Atendemos a clientes de todas las nacionalidades dueñas de propiedades en Costa Rica.',
     faqQ3: '¿Trabajan con independientes y empresas?',
@@ -111,9 +111,9 @@ const translations = {
     faqQ4: '¿Cuánto tarda la evaluación inicial?',
     faqA4: 'La evaluación inicial se entrega en un plazo máximo de 24 horas.',
     faqQ5: '¿Qué tipo de propiedades aplican como garantía?',
-    faqA5: 'Casas, apartamentos, lotes y propiedades comerciales inscritas en Costa Rica.',
-    faqQ6: '¿Puedo hipotecar en primer o segundo grado?',
-    faqA6: 'Sí. Evaluamos operaciones con hipoteca de primer y segundo grado, según el perfil del caso y la propiedad.',
+    faqA5: 'Casas, apartamentos, bodegas y propiedades comerciales inscritas en Costa Rica.',
+    faqQ6: '¿Trabajan con hipoteca en primer grado?',
+    faqA6: 'Sí. Trabajamos con operaciones en primer grado, según el perfil del caso y la propiedad.',
     faqQ7: '¿Puedo cancelar antes de tiempo?',
     faqA7: 'Sí, según las condiciones acordadas en su formalización. Le explicamos este punto desde el inicio.',
     faqQ8: '¿Qué documentación mínima solicitan?',
@@ -134,7 +134,7 @@ const translations = {
     heroKicker: 'Mortgage Loans in Costa Rica',
     heroTitle: 'Loans backed by residential and commercial properties',
     heroText:
-      'Access capital using your house, apartment, land or commercial property as collateral. Mortgage loans in Costa Rica with nationwide coverage, a legal and transparent process. Initial evaluation within 24 hours.',
+      'Access capital using your house, apartment, warehouse or commercial property as collateral. Mortgage loans in Costa Rica with nationwide coverage, a legal and transparent process. Initial evaluation within 24 hours.',
     heroCtaApply: 'Request evaluation',
     heroCtaCalc: 'Estimate payment',
     heroPanelTitle: 'Key data',
@@ -147,7 +147,7 @@ const translations = {
     heroMetric4Label: 'Property location',
     heroMetric4Value: 'Inside and outside the GAM',
     trustTitle1: 'Which properties qualify?',
-    trustText1: 'Houses, apartments, land and commercial properties registered anywhere in Costa Rica.',
+    trustText1: 'Houses, apartments, warehouses and commercial properties registered anywhere in Costa Rica.',
     trustTitle2: 'How does a mortgage-backed loan work?',
     trustText2: 'Your property is used as collateral to access financing, with terms defined by the property value.',
     trustTitle3: 'Clear guided process',
@@ -177,7 +177,7 @@ const translations = {
     fSelect: 'Select',
     fHouse: 'House',
     fApartment: 'Apartment',
-    fLand: 'Land',
+    fLand: 'Warehouse',
     fCommercial: 'Commercial',
     fLandRecord: 'Farm number or cadastral plan',
     fPropertySize: 'Property size (m²)',
@@ -208,7 +208,7 @@ const translations = {
     coverageText:
       'We evaluate operations across the country. If you are seeking liquidity backed by property, we can assist with properties both inside and outside the GAM.',
     coverageCard1Title: 'Mortgage loans in San José',
-    coverageCard1Text: 'Houses, apartments, land lots and commercial properties with agile and transparent guidance.',
+    coverageCard1Text: 'Houses, apartments, warehouses and commercial properties with agile and transparent guidance.',
     coverageCard2Title: 'Mortgage loans in Heredia',
     coverageCard2Text: 'Options for individuals, self-employed applicants and companies with a fast response.',
     coverageCard3Title: 'Mortgage loans in Cartago',
@@ -234,9 +234,9 @@ const translations = {
     faqQ4: 'How long does the initial evaluation take?',
     faqA4: 'The initial evaluation is delivered within a maximum of 24 hours.',
     faqQ5: 'What types of properties qualify as collateral?',
-    faqA5: 'Houses, apartments, land lots and commercial properties registered in Costa Rica.',
-    faqQ6: 'Can I mortgage in first or second degree?',
-    faqA6: 'Yes. We evaluate first- and second-degree mortgage operations depending on the case profile and property.',
+    faqA5: 'Houses, apartments, warehouses and commercial properties registered in Costa Rica.',
+    faqQ6: 'Do you work with first-degree mortgages?',
+    faqA6: 'Yes. We work with first-degree mortgage operations depending on the case profile and property.',
     faqQ7: 'Can I repay early?',
     faqA7: 'Yes, according to the conditions agreed during formalization. We explain this point from the start.',
     faqQ8: 'What minimum documentation do you require?',
@@ -255,9 +255,9 @@ const translations = {
     navTestimonials: 'Témoignages',
     navFacebook: 'Facebook',
     heroKicker: 'Prêts hypothécaires au Costa Rica',
-    heroTitle: 'Prêts garantis par maisons, terrains et biens commerciaux',
+    heroTitle: 'Prêts garantis par maisons, appartements, entrepôts et biens commerciaux',
     heroText:
-      'Obtenez des liquidités avec votre maison, appartement, terrain ou bien commercial comme garantie. Prêts hypothécaires au Costa Rica avec couverture nationale, processus légal et transparent. Évaluation initiale en 24 heures.',
+      'Obtenez des liquidités avec votre maison, appartement, entrepôt ou bien commercial comme garantie. Prêts hypothécaires au Costa Rica avec couverture nationale, processus légal et transparent. Évaluation initiale en 24 heures.',
     heroCtaApply: 'Demander une évaluation',
     heroCtaCalc: 'Calculer la mensualité',
     heroPanelTitle: 'Données clés',
@@ -270,7 +270,7 @@ const translations = {
     heroMetric4Label: 'Localisation de la propriété',
     heroMetric4Value: 'Dans et hors de la GAM',
     trustTitle1: 'Quelles propriétés sont éligibles ?',
-    trustText1: 'Maisons, appartements, terrains et propriétés commerciales inscrites partout au Costa Rica.',
+    trustText1: 'Maisons, appartements, entrepôts et propriétés commerciales inscrites partout au Costa Rica.',
     trustTitle2: 'Comment fonctionne un prêt hypothécaire ?',
     trustText2: 'Votre propriété sert de garantie pour accéder au financement, avec des conditions selon la valeur du bien.',
     trustTitle3: 'Processus clair et accompagné',
@@ -300,7 +300,7 @@ const translations = {
     fSelect: 'Sélectionner',
     fHouse: 'Maison',
     fApartment: 'Appartement',
-    fLand: 'Terrain',
+    fLand: 'Entrepôt',
     fCommercial: 'Commercial',
     fLandRecord: 'Numéro de propriété ou plan cadastral',
     fPropertySize: 'Surface de la propriété (m²)',
@@ -331,7 +331,7 @@ const translations = {
     coverageText:
       'Nous évaluons des opérations dans tout le pays. Si vous recherchez des liquidités avec garantie hypothécaire, nous pouvons traiter des propriétés dans et hors de la GAM.',
     coverageCard1Title: 'Prêts hypothécaires à San José',
-    coverageCard1Text: 'Maisons, appartements, terrains et propriétés commerciales avec accompagnement agile et transparent.',
+    coverageCard1Text: 'Maisons, appartements, entrepôts et propriétés commerciales avec accompagnement agile et transparent.',
     coverageCard2Title: 'Prêts hypothécaires à Heredia',
     coverageCard2Text: 'Options pour particuliers, indépendants et entreprises avec réponse rapide.',
     coverageCard3Title: 'Prêts hypothécaires à Cartago',
@@ -357,9 +357,9 @@ const translations = {
     faqQ4: 'Combien de temps prend l’évaluation initiale ?',
     faqA4: 'L’évaluation initiale est livrée dans un délai maximal de 24 heures.',
     faqQ5: 'Quels types de propriétés sont acceptés en garantie ?',
-    faqA5: 'Maisons, appartements, terrains et propriétés commerciales inscrites au Costa Rica.',
-    faqQ6: 'Puis-je hypothéquer en premier ou en second rang ?',
-    faqA6: 'Oui. Nous évaluons les opérations en premier et second rang selon le profil du dossier et la propriété.',
+    faqA5: 'Maisons, appartements, entrepôts et propriétés commerciales inscrites au Costa Rica.',
+    faqQ6: 'Travaillez-vous avec des hypothèques en premier rang ?',
+    faqA6: 'Oui. Nous travaillons avec des opérations en premier rang selon le profil du dossier et la propriété.',
     faqQ7: 'Puis-je rembourser par anticipation ?',
     faqA7: 'Oui, selon les conditions convenues lors de la formalisation. Nous expliquons ce point dès le début.',
     faqQ8: 'Quelle documentation minimale demandez-vous ?',
@@ -398,8 +398,8 @@ const testimonials = {
       name: 'Mariana P. - Cartago (persona física / apartamento)'
     },
     {
-      text: 'Pensé que por estar fuera del GAM iba a ser complicado, pero no fue así. Presenté un lote como garantía y recibí acompañamiento en todo momento. La claridad del proceso marcó la diferencia.',
-      name: 'José A. - Guanacaste (persona física / lote, fuera del GAM)'
+      text: 'Pensé que por estar fuera del GAM iba a ser complicado, pero no fue así. Presenté una bodega como garantía y recibí acompañamiento en todo momento. La claridad del proceso marcó la diferencia.',
+      name: 'José A. - Guanacaste (persona física / bodega, fuera del GAM)'
     },
     {
       text: 'Buscábamos capital de trabajo para el negocio y utilizamos una propiedad comercial como respaldo. Nos explicaron todo desde el inicio y el proceso fue mucho más ágil de lo esperado. Fue clave poder avanzar sin frenar la operación.',
@@ -424,8 +424,8 @@ const testimonials = {
       name: 'Mariana P. - Cartago (individual / apartment)'
     },
     {
-      text: 'I thought being outside the GAM would make everything difficult, but it was not. I submitted a land lot as collateral and received support throughout the process. The clarity made all the difference.',
-      name: 'José A. - Guanacaste (individual / land lot, outside GAM)'
+      text: 'I thought being outside the GAM would make everything difficult, but it was not. I submitted a warehouse as collateral and received support throughout the process. The clarity made all the difference.',
+      name: 'José A. - Guanacaste (individual / warehouse, outside GAM)'
     },
     {
       text: 'We needed working capital for our business and used a commercial property as collateral. Everything was explained from the beginning and the process was faster than expected. It helped us move forward without stopping operations.',
@@ -450,8 +450,8 @@ const testimonials = {
       name: 'Mariana P. - Cartago (personne physique / appartement)'
     },
     {
-      text: 'Je pensais que le fait d’être hors du GAM compliquerait tout, mais ce ne fut pas le cas. J’ai présenté un terrain comme garantie et j’ai été accompagné tout au long du processus. La clarté a fait la différence.',
-      name: 'José A. - Guanacaste (personne physique / terrain, hors GAM)'
+      text: 'Je pensais que le fait d’être hors du GAM compliquerait tout, mais ce ne fut pas le cas. J’ai présenté un entrepôt comme garantie et j’ai été accompagné tout au long du processus. La clarté a fait la différence.',
+      name: 'José A. - Guanacaste (personne physique / entrepôt, hors GAM)'
     },
     {
       text: 'Nous avions besoin de fonds de roulement pour l’entreprise et nous avons utilisé une propriété commerciale comme garantie. Tout a été expliqué dès le début et le processus a été plus rapide que prévu. Cela nous a permis d’avancer sans freiner l’activité.',
