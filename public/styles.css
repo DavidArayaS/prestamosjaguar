@@ -602,12 +602,12 @@ input,
 select:not(.lang-select),
 textarea {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 14px;
   border: 1px solid rgba(148, 163, 184, 0.36);
-  padding: 12px 14px;
-  min-height: 46px;
+  padding: 14px 16px;
+  min-height: 52px;
   line-height: 1.25;
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   font-family: inherit;
   color: var(--ink);
   background: var(--glass-solid);
@@ -627,18 +627,14 @@ input[type='number']::-webkit-inner-spin-button {
 
 .money-field {
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 8px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
 }
 
 .money-field select {
-  min-width: 130px;
-  min-height: 46px;
-}
-
-.loan-form input[name='tamanoPropiedad'] {
-  height: 46px;
-  min-height: 46px;
+  min-width: 168px;
+  min-height: 52px;
 }
 
 input:focus-visible,
@@ -652,15 +648,16 @@ textarea:focus-visible {
 
 .field-help {
   color: #334155;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  line-height: 1.4;
 }
 
 .field-help.subtle {
-  color: #64748b;
-  font-size: 0.78rem;
+  color: #6b7280;
+  font-size: 0.77rem;
 }
 
 .calc-result {
@@ -759,28 +756,69 @@ textarea:focus-visible {
 
 .loan-form {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 20px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(247, 251, 255, 0.92));
+}
+
+.form-trust-strip {
+  max-width: 980px;
+  margin: 0 auto 14px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(33, 89, 255, 0.2);
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.9), rgba(236, 244, 255, 0.85));
+  display: grid;
+  gap: 2px;
+}
+
+.form-trust-strip p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #1e3a8a;
+  font-weight: 700;
+}
+
+.loan-form label {
+  display: grid;
+  gap: 8px;
 }
 
 .form-group-title {
-  margin: 4px 0 2px;
-  padding-top: 12px;
+  margin: 2px 0 -2px;
+  padding-top: 10px;
   border-top: 1px solid rgba(148, 163, 184, 0.22);
-  font-size: 0.82rem;
-  letter-spacing: 0.06em;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   font-weight: 800;
-  color: #1e3a8a;
+  color: #1d4ed8;
 }
 
 .full {
   grid-column: 1 / -1;
 }
 
+.field-priority .field-label span:first-child {
+  color: #0f172a;
+}
+
+.amount-limits {
+  display: block;
+  color: #1f2937;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
 .captcha-block {
   display: grid;
-  gap: 8px;
+  gap: 10px;
+  padding-top: 4px;
 }
 
 .captcha-box {
@@ -812,11 +850,11 @@ textarea:focus-visible {
 }
 
 .loan-form .btn-primary[type='submit'] {
-  min-height: 58px;
-  padding: 15px 24px;
-  font-size: 1.02rem;
+  min-height: 60px;
+  padding: 16px 24px;
+  font-size: 1.05rem;
   font-weight: 800;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.015em;
   background: linear-gradient(160deg, #174ef7, #0d3dc0);
   box-shadow: 0 16px 30px rgba(23, 78, 247, 0.28);
   transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
@@ -953,7 +991,7 @@ textarea:focus-visible {
 }
 
 .loan-form .location-left {
-  grid-column: 2 / 3;
+  grid-column: auto;
   width: 100%;
 }
 
@@ -1010,6 +1048,19 @@ textarea:focus-visible {
   .loan-form,
   .testimonial-track {
     grid-template-columns: 1fr;
+  }
+
+  .loan-form {
+    padding: 20px 18px;
+    gap: 14px;
+  }
+
+  .form-trust-strip {
+    padding: 10px 12px;
+  }
+
+  .form-trust-strip p {
+    font-size: 0.76rem;
   }
 
   .loan-form .location-left {

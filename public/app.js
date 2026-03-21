@@ -42,9 +42,12 @@ const translations = {
     termYears: 'años',
     formTitle: 'Solicitud de préstamo hipotecario',
     formText: 'Completa este formulario y enviaremos tu caso para evaluación. Te contactamos por teléfono.',
+    formConfidentiality: 'Evaluamos su propiedad de forma privada y confidencial',
+    formFastTime: 'Toma menos de 2 minutos',
+    formOwnerOnly: 'Solo para propietarios • Montos desde ₡15 millones',
     fName: 'Nombre completo',
     fId: 'Número de cédula',
-    fIdHint: 'Ingrese solo números, incluyendo ceros iniciales (sin guiones).',
+    fIdHint: 'Se utiliza únicamente para validar el proceso.',
     fPhoneMain: 'Teléfono principal',
     fPhoneSec: 'Teléfono secundario',
     optionalLabel: 'Opcional',
@@ -57,9 +60,11 @@ const translations = {
     fLand: 'Bodega',
     fCommercial: 'Comercial',
     fLandRecord: 'Número de finca o plano catastrado',
+    fLandRecordHint: 'Si lo tiene a mano, puede incluirlo.',
     fPropertySize: 'Tamaño de la propiedad (m²)',
-    fFiscal: 'Valor fiscal de la propiedad',
-    fFiscalMinPrefix: 'Mínimo recomendado:',
+    fFiscal: 'Valor aproximado de la propiedad',
+    approxValueHelp: 'Ingresa el valor estimado del inmueble.',
+    amountLimitsInfo: 'Mínimo ₡15.000.000 / $30.000 • Máximo ₡150.000.000 / $300.000',
     fProvince: 'Provincia',
     fCanton: 'Cantón',
     fSelectProvince: 'Seleccionar provincia',
@@ -67,9 +72,10 @@ const translations = {
     formGroupPersonal: 'Datos personales',
     formGroupLoan: 'Datos del préstamo',
     formGroupProperty: 'Datos de la propiedad',
+    formGroupSubmit: 'Confirmación y envío',
     currencyCRC: 'Colones (CRC)',
     currencyUSD: 'Dólares (USD)',
-    formSubmit: 'Enviar solicitud',
+    formSubmit: 'Solicitar evaluación',
     formSending: 'Enviando solicitud...',
     formSuccess: 'Recibimos su solicitud con éxito. Nuestro equipo le contactará muy pronto.',
     formError: 'No se pudo enviar. Revisa los datos o la configuración del servidor.',
@@ -165,6 +171,9 @@ const translations = {
     termYears: 'years',
     formTitle: 'Mortgage loan application',
     formText: 'Complete this form and we will send your case for review. We will contact you by phone.',
+    formConfidentiality: 'We evaluate your property in a private and confidential way',
+    formFastTime: 'Takes less than 2 minutes',
+    formOwnerOnly: 'For property owners only • Amounts from CRC 15 million',
     fName: 'Full name',
     fId: 'ID number',
     fIdHint: 'Enter digits only, including leading zeros (no hyphens).',
@@ -180,9 +189,11 @@ const translations = {
     fLand: 'Warehouse',
     fCommercial: 'Commercial',
     fLandRecord: 'Farm number or cadastral plan',
+    fLandRecordHint: 'If you have it handy, you can include it.',
     fPropertySize: 'Property size (m²)',
-    fFiscal: 'Fiscal property value',
-    fFiscalMinPrefix: 'Suggested minimum:',
+    fFiscal: 'Approximate property value',
+    approxValueHelp: 'Tell us the estimated price of the property.',
+    amountLimitsInfo: 'Minimum ₡15,000,000 / $30,000 • Maximum ₡150,000,000 / $300,000',
     fProvince: 'Province',
     fCanton: 'County',
     fSelectProvince: 'Select province',
@@ -190,9 +201,10 @@ const translations = {
     formGroupPersonal: 'Personal details',
     formGroupLoan: 'Loan details',
     formGroupProperty: 'Property details',
+    formGroupSubmit: 'Confirmation and submit',
     currencyCRC: 'Colones (CRC)',
     currencyUSD: 'Dollars (USD)',
-    formSubmit: 'Send application',
+    formSubmit: 'Request evaluation',
     formSending: 'Sending application...',
     formSuccess: 'Application sent successfully. We will contact you soon.',
     formError: 'Could not send. Check data or server configuration.',
@@ -288,6 +300,9 @@ const translations = {
     termYears: 'ans',
     formTitle: 'Demande de prêt hypothécaire',
     formText: 'Remplissez ce formulaire et nous évaluerons votre dossier. Nous vous contacterons par téléphone.',
+    formConfidentiality: 'Nous évaluons votre bien de manière privée et confidentielle',
+    formFastTime: 'Prend moins de 2 minutes',
+    formOwnerOnly: 'Réservé aux propriétaires • Montants dès 15 millions CRC',
     fName: 'Nom complet',
     fId: 'Numéro d’identité',
     fIdHint: 'Entrez uniquement des chiffres, y compris les zéros initiaux (sans tirets).',
@@ -303,9 +318,11 @@ const translations = {
     fLand: 'Entrepôt',
     fCommercial: 'Commercial',
     fLandRecord: 'Numéro de propriété ou plan cadastral',
+    fLandRecordHint: 'Si vous l’avez sous la main, vous pouvez l’inclure.',
     fPropertySize: 'Surface de la propriété (m²)',
-    fFiscal: 'Valeur fiscale de la propriété',
-    fFiscalMinPrefix: 'Minimum recommandé :',
+    fFiscal: 'Valeur approximative du bien',
+    approxValueHelp: 'Indiquez la valeur estimée du bien.',
+    amountLimitsInfo: 'Minimum ₡15 000 000 / 30 000 $ • Maximum ₡150 000 000 / 300 000 $',
     fProvince: 'Province',
     fCanton: 'Canton',
     fSelectProvince: 'Sélectionner la province',
@@ -313,9 +330,10 @@ const translations = {
     formGroupPersonal: 'Données personnelles',
     formGroupLoan: 'Données du prêt',
     formGroupProperty: 'Données de la propriété',
+    formGroupSubmit: 'Confirmation et envoi',
     currencyCRC: 'Colones (CRC)',
     currencyUSD: 'Dollars (USD)',
-    formSubmit: 'Envoyer la demande',
+    formSubmit: 'Demander une évaluation',
     formSending: 'Envoi de la demande...',
     formSuccess: 'Demande envoyée correctement. Nous vous contacterons bientôt.',
     formError: 'Impossible d’envoyer. Vérifiez les données ou la configuration du serveur.',
@@ -469,12 +487,12 @@ const testimonials = {
 };
 
 const currencyConfig = {
-  CRC: { min: 10000000, max: 50000000, step: 250000, locale: 'es-CR' },
-  USD: { min: 20000, max: 100000, step: 500, locale: 'en-US' }
+  CRC: { min: 15000000, max: 150000000, step: 500000, locale: 'es-CR' },
+  USD: { min: 30000, max: 300000, step: 1000, locale: 'en-US' }
 };
 const formAmountConfig = {
-  CRC: { min: 10000000, max: 100000000, step: 1 },
-  USD: { min: 20000, max: 200000, step: 1 }
+  CRC: { min: 15000000, max: 150000000, step: 1 },
+  USD: { min: 30000, max: 300000, step: 1 }
 };
 const allowedEmailDomains = new Set([
   'gmail.com',
@@ -769,6 +787,7 @@ function applyMoneyBounds(input, select) {
     input.value = formatThousandsDots(Math.min(val, config.max));
   }
   validateLoanAmountRange();
+  updateMoneyPreviews();
 }
 
 function setupFormCurrencyFields() {
@@ -784,25 +803,20 @@ function setupFormCurrencyFields() {
         const fiscalCurrency = form.elements.monedaValorFiscal;
         if (fiscalCurrency) fiscalCurrency.value = amountCurrency.value;
         validateLoanAmountRange();
-        validateFiscalVsLoan();
         updateMoneyPreviews();
       });
       amountCurrency.dataset.boundAmountCurrency = '1';
     }
     if (!amountInput.dataset.boundAmountInput) {
-      amountInput.addEventListener('input', () => {
+      const update = () => {
         normalizeLoanAmountInput();
         validateLoanAmountRange();
-      });
-      amountInput.addEventListener('change', () => {
-        normalizeLoanAmountInput();
-        validateLoanAmountRange();
-      });
+        updateMoneyPreviews();
+      };
+      amountInput.addEventListener('input', update);
+      amountInput.addEventListener('change', update);
       amountInput.addEventListener('paste', () => {
-        requestAnimationFrame(() => {
-          normalizeLoanAmountInput();
-          validateLoanAmountRange();
-        });
+        requestAnimationFrame(update);
       });
       amountInput.dataset.boundAmountInput = '1';
     }
@@ -825,10 +839,6 @@ function setDefaultCurrencySelection() {
   });
 }
 
-function toCrc(amount, currency) {
-  return currency === 'USD' ? amount * 525 : amount;
-}
-
 function updateMoneyPreviews() {
   const amountInput = form.elements.montoPrestamo;
   const amountCurrency = form.elements.monedaMontoPrestamo;
@@ -843,39 +853,6 @@ function updateMoneyPreviews() {
   if (fiscalInput && fiscalCurrency && fiscalPreview) {
     fiscalPreview.textContent = formatCurrencyDots(Number(fiscalInput.value) || 0, fiscalCurrency.value);
   }
-}
-
-function validateFiscalVsLoan() {
-  const amountInput = form.elements.montoPrestamo;
-  const amountCurrency = form.elements.monedaMontoPrestamo;
-  const fiscalInput = form.elements.valorFiscal;
-  const fiscalCurrency = form.elements.monedaValorFiscal;
-  if (!amountInput || !amountCurrency || !fiscalInput || !fiscalCurrency) return true;
-
-  const loan = parseAmountInput(amountInput.value);
-  const fiscal = Number(fiscalInput.value);
-  if (!Number.isFinite(loan) || !Number.isFinite(fiscal)) return true;
-
-  const minimumCrc = toCrc(loan, amountCurrency.value) * 1.5;
-  const fiscalCrc = toCrc(fiscal, fiscalCurrency.value);
-  const valid = fiscalCrc >= minimumCrc;
-
-  const minimumInLoanCurrency = amountCurrency.value === 'USD' ? minimumCrc / 525 : minimumCrc;
-  const hint = document.getElementById('fiscalMinHint');
-  if (hint) hint.textContent = formatCurrencyDots(minimumInLoanCurrency, amountCurrency.value);
-
-  fiscalInput.setCustomValidity(
-    valid
-      ? ''
-      : currentLang === 'es'
-        ? 'El valor fiscal debe ser al menos 50% mayor al monto solicitado.'
-        : currentLang === 'fr'
-          ? 'La valeur fiscale doit être au moins 50% supérieure au montant demandé.'
-          : 'Fiscal value must be at least 50% higher than requested amount.'
-  );
-
-  updateMoneyPreviews();
-  return valid;
 }
 
 function populateProvinces() {
@@ -947,7 +924,6 @@ function applyTranslations() {
   populateCantons(provinciaSelect.value, cantonSelect.value);
   renderTestimonials();
   calculateLoan();
-  validateFiscalVsLoan();
   validateLoanAmountRange();
   validateEmailDomain();
 }
@@ -978,14 +954,8 @@ calcRange.addEventListener('input', calculateLoan);
 ['montoPrestamo', 'monedaMontoPrestamo', 'valorFiscal', 'monedaValorFiscal'].forEach((name) => {
   const field = form.elements[name];
   if (!field) return;
-  field.addEventListener('input', () => {
-    validateFiscalVsLoan();
-    updateMoneyPreviews();
-  });
-  field.addEventListener('change', () => {
-    validateFiscalVsLoan();
-    updateMoneyPreviews();
-  });
+  field.addEventListener('input', updateMoneyPreviews);
+  field.addEventListener('change', updateMoneyPreviews);
 });
 
 sanitizeDigits(form.elements.cedula, 11);
@@ -1021,9 +991,8 @@ form.addEventListener('submit', async (e) => {
     }
   }
   const loanOk = validateLoanAmountRange();
-  const fiscalOk = validateFiscalVsLoan();
   const emailOk = validateEmailDomain();
-  if (!loanOk || !fiscalOk || !emailOk || !form.reportValidity()) return;
+  if (!loanOk || !emailOk || !form.reportValidity()) return;
 
   formStatus.className = 'full form-status';
   formStatus.textContent = translations[currentLang].formSending;

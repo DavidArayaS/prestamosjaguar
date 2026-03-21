@@ -237,55 +237,15 @@
           </p>
         </div>
 
-        <form id="loanForm" class="loan-form glass card-raise" autocomplete="off">
-          <p class="full form-group-title" data-i18n="formGroupPersonal">Datos personales</p>
-          <label>
-            <span class="field-label">
-              <span data-i18n="fName">Nombre completo</span>
-              <small class="req-mark" aria-hidden="true">*</small>
-            </span>
-            <input name="nombreCompleto" maxlength="40" required />
-          </label>
-          <label>
-            <span class="field-label">
-              <span data-i18n="fId">Numero de cedula</span>
-              <small class="req-mark" aria-hidden="true">*</small>
-            </span>
-            <input name="cedula" inputmode="numeric" pattern="[0-9]{1,11}" maxlength="11" required />
-            <small class="field-help subtle" data-i18n="fIdHint">
-              Ingrese solo numeros, incluyendo ceros iniciales (sin guiones).
-            </small>
-          </label>
-          <label>
-            <span class="field-label">
-              <span data-i18n="fPhoneMain">Telefono principal</span>
-              <small class="req-mark" aria-hidden="true">*</small>
-            </span>
-            <input
-              name="telefonoPrincipal"
-              inputmode="numeric"
-              pattern="[0-9]{8}"
-              maxlength="8"
-              required
-            />
-          </label>
-          <label>
-            <span class="field-label">
-              <span data-i18n="fPhoneSec">Telefono secundario</span>
-              <small class="optional-mark" data-i18n="optionalLabel">Opcional</small>
-            </span>
-            <input name="telefonoSecundario" inputmode="numeric" pattern="[0-9]{8}" maxlength="8" />
-          </label>
-          <label class="full">
-            <span class="field-label">
-              <span data-i18n="fEmail">Correo electronico</span>
-              <small class="req-mark" aria-hidden="true">*</small>
-            </span>
-            <input type="email" name="correo" maxlength="50" required />
-          </label>
+        <div class="form-trust-strip">
+          <p data-i18n="formConfidentiality">Evaluamos su propiedad de forma privada y confidencial</p>
+          <p data-i18n="formFastTime">Toma menos de 2 minutos</p>
+          <p data-i18n="formOwnerOnly">Solo para propietarios • Montos desde ₡15 millones</p>
+        </div>
 
-          <p class="full form-group-title" data-i18n="formGroupLoan">Datos del prestamo</p>
-          <label>
+        <form id="loanForm" class="loan-form glass card-raise" autocomplete="off">
+          <p class="full form-group-title" data-i18n="formGroupLoan">Datos del préstamo</p>
+          <label class="field-priority">
             <span class="field-label">
               <span data-i18n="fAmount">Cantidad solicitada</span>
               <small class="req-mark" aria-hidden="true">*</small>
@@ -295,18 +255,21 @@
                 type="text"
                 name="montoPrestamo"
                 inputmode="numeric"
-                placeholder="10.000.000"
+                placeholder="Ej. 25.000.000"
                 autocomplete="off"
                 required
               />
               <select name="monedaMontoPrestamo" required>
                 <option value="CRC" data-i18n="currencyCRC">Colones (CRC)</option>
-                <option value="USD" data-i18n="currencyUSD">Dolares (USD)</option>
+                <option value="USD" data-i18n="currencyUSD">Dólares (USD)</option>
               </select>
             </div>
             <small class="field-help" id="montoPreview">₡0</small>
+            <small class="field-help amount-limits" id="amountLimits" data-i18n="amountLimitsInfo">
+              Mínimo ₡15.000.000 / $30.000 • Máximo ₡150.000.000 / $300.000
+            </small>
           </label>
-          <label>
+          <label class="field-priority">
             <span class="field-label">
               <span data-i18n="fPropertyType">Tipo de propiedad a hipotecar</span>
               <small class="req-mark" aria-hidden="true">*</small>
@@ -321,53 +284,35 @@
           </label>
 
           <p class="full form-group-title" data-i18n="formGroupProperty">Datos de la propiedad</p>
-          <label>
+          <label class="field-priority">
             <span class="field-label">
-              <span data-i18n="fFiscal">Valor fiscal de la propiedad</span>
+              <span data-i18n="fFiscal">Valor aproximado de la propiedad</span>
               <small class="req-mark" aria-hidden="true">*</small>
             </span>
             <div class="money-field">
-              <input type="number" name="valorFiscal" min="0" step="1" value="0" required />
+              <input type="number" name="valorFiscal" min="0" step="1" value="0" placeholder="Ej. 75.000.000" required />
               <select name="monedaValorFiscal" required>
                 <option value="CRC" data-i18n="currencyCRC">Colones (CRC)</option>
-                <option value="USD" data-i18n="currencyUSD">Dolares (USD)</option>
+                <option value="USD" data-i18n="currencyUSD">Dólares (USD)</option>
               </select>
             </div>
             <small class="field-help" id="fiscalPreview">₡0</small>
-            <small class="field-help">
-              <span data-i18n="fFiscalMinPrefix">Mínimo recomendado:</span>
-              <strong id="fiscalMinHint">₡0</strong>
-            </small>
-          </label>
-          <label>
-            <span class="field-label">
-              <span data-i18n="fPropertySize">Tamano de la propiedad (m²)</span>
-              <small class="req-mark" aria-hidden="true">*</small>
-            </span>
-            <input
-              type="number"
-              name="tamanoPropiedad"
-              placeholder="m²"
-              min="1"
-              max="50000"
-              step="1"
-              required
-            />
+            <small class="field-help" data-i18n="approxValueHelp">Valor estimado, no necesita ser exacto.</small>
           </label>
           <label>
             <span class="field-label">
               <span data-i18n="fLandRecord">Número de finca o plano catastrado</span>
-              <small class="req-mark" aria-hidden="true">*</small>
+              <small class="optional-mark" data-i18n="optionalLabel">Opcional</small>
             </span>
             <input
               name="numeroFincaPlano"
               maxlength="20"
               pattern="[A-Za-z0-9-]{1,20}"
               placeholder="Ej. 1-123456-000"
-              required
             />
+            <small class="field-help subtle" data-i18n="fLandRecordHint">Si lo tiene a mano, puede incluirlo.</small>
           </label>
-          <label class="location-left">
+          <label class="location-left field-priority">
             <span class="field-label">
               <span data-i18n="fProvince">Provincia</span>
               <small class="req-mark" aria-hidden="true">*</small>
@@ -376,7 +321,7 @@
               <option value="" data-i18n="fSelectProvince">Seleccionar provincia</option>
             </select>
           </label>
-          <label class="location-left">
+          <label class="location-left field-priority">
             <span class="field-label">
               <span data-i18n="fCanton">Cantón</span>
               <small class="req-mark" aria-hidden="true">*</small>
@@ -385,12 +330,61 @@
               <option value="" data-i18n="fSelectCanton">Seleccionar cantón</option>
             </select>
           </label>
+
+          <p class="full form-group-title" data-i18n="formGroupPersonal">Datos personales</p>
+          <label>
+            <span class="field-label">
+              <span data-i18n="fName">Nombre completo</span>
+              <small class="req-mark" aria-hidden="true">*</small>
+            </span>
+            <input name="nombreCompleto" maxlength="40" placeholder="Tal como aparece en su cédula" required />
+          </label>
+          <label>
+            <span class="field-label">
+              <span data-i18n="fId">Numero de cedula</span>
+              <small class="req-mark" aria-hidden="true">*</small>
+            </span>
+            <input name="cedula" inputmode="numeric" pattern="[0-9]{1,11}" maxlength="11" placeholder="Ej. 0101234567" required />
+            <small class="field-help subtle" data-i18n="fIdHint">
+              Se utiliza únicamente para validar el proceso.
+            </small>
+          </label>
+          <label>
+            <span class="field-label">
+              <span data-i18n="fPhoneMain">Telefono principal</span>
+              <small class="req-mark" aria-hidden="true">*</small>
+            </span>
+            <input
+              name="telefonoPrincipal"
+              inputmode="numeric"
+              pattern="[0-9]{8}"
+              maxlength="8"
+              placeholder="Ej. 88887777"
+              required
+            />
+          </label>
+          <label>
+            <span class="field-label">
+              <span data-i18n="fPhoneSec">Telefono secundario</span>
+              <small class="optional-mark" data-i18n="optionalLabel">Opcional</small>
+            </span>
+            <input name="telefonoSecundario" inputmode="numeric" pattern="[0-9]{8}" maxlength="8" placeholder="Ej. 22223333" />
+          </label>
+          <label class="full">
+            <span class="field-label">
+              <span data-i18n="fEmail">Correo electronico</span>
+              <small class="req-mark" aria-hidden="true">*</small>
+            </span>
+            <input type="email" name="correo" maxlength="50" placeholder="correo@ejemplo.com" required />
+          </label>
+
+          <p class="full form-group-title" data-i18n="formGroupSubmit">Confirmación y envío</p>
           <div class="full captcha-block">
             <div id="captchaContainer" class="captcha-box" aria-live="polite"></div>
             <input type="hidden" id="captchaToken" name="captchaToken" />
           </div>
           <button class="btn btn-primary full" type="submit" data-i18n="formSubmit">
-            Enviar solicitud
+            Solicitar evaluación
           </button>
           <p id="formStatus" class="full form-status" aria-live="polite"></p>
         </form>
