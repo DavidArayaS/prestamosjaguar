@@ -582,7 +582,12 @@ function setRangeForCurrency(nextCurrency) {
 }
 
 function calculateLoan() {
-  const principal = Number(calcRange.value);
+  const config = currencyConfig[currentCurrency];
+  const rawPrincipal = Number(calcRange.value);
+  const principal = Number.isFinite(rawPrincipal)
+    ? Math.min(config.max, Math.max(config.min, rawPrincipal))
+    : config.min;
+  if (String(principal) !== calcRange.value) calcRange.value = String(principal);
   const monthlyPayment = principal * monthlyInterestRate;
   calcAmountValue.textContent = new Intl.NumberFormat(currencyConfig[currentCurrency].locale, {
     maximumFractionDigits: currentCurrency === 'CRC' ? 0 : 2
